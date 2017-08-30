@@ -107,10 +107,6 @@ namespace GrastinService
             pathError = dir + "log " + thisTime + ".txt";
             File.AppendAllText(pathError, "Старт программы " + thisTime + ". \n\n");
 
-            // Установка культуры для форматов чисел и дат
-            CultureInfo ci = new CultureInfo("en-US");
-            Thread.CurrentThread.CurrentCulture = ci;
-
             // Создание подключения к БД
             OracleConnection conn = new OracleConnection(connString);
 
